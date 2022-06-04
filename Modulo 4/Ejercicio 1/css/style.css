@@ -25,10 +25,6 @@ form {
   height: 400px;
   padding: 20px;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 input,
