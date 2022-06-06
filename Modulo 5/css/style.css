@@ -1,0 +1,10 @@
+nav {
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+#logo-azul {
+  width: 5%;
+}
+
