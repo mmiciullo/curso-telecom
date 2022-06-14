@@ -114,6 +114,9 @@
   .extra {
     height: 80px;
   }
+  .image {
+    height: 80px;
+  }
 }
 
 /* Mobile */
