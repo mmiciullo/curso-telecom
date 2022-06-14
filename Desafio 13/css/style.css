@@ -7,10 +7,9 @@
 .container {
   text-transform: uppercase;
   display: grid;
-  align-items: center;
-  justify-content: center;
+
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5);
+  grid-template-rows: repeat(5, auto);
   grid-template-areas:
     "header menu menu menu"
     "hero hero hero hero"
@@ -20,12 +19,18 @@
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   background-color: #0f1629;
   grid-area: header;
   height: 80px;
 }
 .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   background-color: #ef3d4d;
   grid-area: menu;
@@ -33,6 +38,9 @@
 }
 
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 450px;
   color: white;
   background-color: #4c86c6;
@@ -40,6 +48,9 @@
 }
 
 .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 350px;
   color: white;
   background-color: #24344b;
@@ -47,16 +58,27 @@
 }
 
 .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #c1e4e6;
   grid-area: image;
+  height: 174px;
 }
 
 .extra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #4dbd97;
+  height: 174px;
   grid-area: extra;
 }
 
 .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 93px;
   background-color: #fed269;
   grid-area: banner;
