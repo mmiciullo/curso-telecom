@@ -7,6 +7,8 @@
 .container {
   text-transform: uppercase;
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5);
   grid-template-areas:
@@ -18,18 +20,12 @@
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
   background-color: #0f1629;
   grid-area: header;
   height: 80px;
 }
 .menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
   background-color: #ef3d4d;
   grid-area: menu;
@@ -37,9 +33,6 @@
 }
 
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 450px;
   color: white;
   background-color: #4c86c6;
@@ -47,9 +40,6 @@
 }
 
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 350px;
   color: white;
   background-color: #24344b;
@@ -57,25 +47,16 @@
 }
 
 .image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #c1e4e6;
   grid-area: image;
 }
 
 .extra {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #4dbd97;
   grid-area: extra;
 }
 
 .banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 93px;
   background-color: #fed269;
   grid-area: banner;
@@ -143,11 +124,10 @@
   .banner {
     height: 111px;
   }
-  .extra{
+  .extra {
     height: 111px;
   }
-  .image{ 
-
+  .image {
     height: 111px;
   }
 }
