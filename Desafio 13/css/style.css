@@ -7,7 +7,6 @@
 .container {
   text-transform: uppercase;
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, auto);
   grid-template-areas:
@@ -17,20 +16,18 @@
     "main main empty extra"
     "banner banner banner banner";
 }
-
-.header {
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header {
   color: white;
   background-color: #0f1629;
   grid-area: header;
   height: 80px;
 }
 .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
   background-color: #ef3d4d;
   grid-area: menu;
@@ -38,9 +35,6 @@
 }
 
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 450px;
   color: white;
   background-color: #4c86c6;
@@ -48,9 +42,6 @@
 }
 
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 350px;
   color: white;
   background-color: #24344b;
@@ -58,27 +49,18 @@
 }
 
 .image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #c1e4e6;
   grid-area: image;
   height: 174px;
 }
 
 .extra {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #4dbd97;
   height: 174px;
   grid-area: extra;
 }
 
 .banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 93px;
   background-color: #fed269;
   grid-area: banner;
