@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url(../fonts/coolvetica\ rg.otf);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+main{
+    display: flex;
+    justify-content: space-around
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em;
+  border-radius: 15px;
+  width: 45%;
+  background-color: #eff2ff;
+  box-shadow: 5px 5px 20px black;
+}
+
+#privacidad {
+  font-family: Coolvetica;
+  font-weight: 400;
+  color: #0a2ff1;
+  font-size: 48px;
+  margin: 20px 60px;
+}
+.imgIdentidad {
+  width: 15%;
+}
+.imgInfo {
+  width: 10%;
+}
+.imgDiag {
+    align-items: center;
+}
+.contenedor-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-around
+}
+p {
+  text-align: center;
+  font-size: 28px;
+  color: #04146c;
+  font-weight: 300;
+}
+div p {
+    font-weight: 400;
+    font-size: 21.33px;
+    color: #04146c;
+}
+div img {
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.imgIdentificadores {
+  width: 20%;
+}
+.parrafoIdentidad {
+  font-weight: 700;
+  font-size: 29.33px;
+  color: #0a2ff1;
+  
+}
