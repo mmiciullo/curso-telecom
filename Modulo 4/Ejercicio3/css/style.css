@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+#img {
+  width: 100%;
+  background-image: url(../img/M4-Desafio3-header.png);
+  height: 800px;
+  background-size: cover;
+}
+section {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+}
+
+main {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+h1 {
+  text-align: left;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 58.66px;
+  color: #0a2ff1;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 25.33px;
+  color: #0a2ff1;
+}
+
+p {
+  font-weight: 400;
+  font-size: 25.33px;
+  color: #000;
+}
+
+img {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.contact {
+  width: 80%;
+  margin: auto;
+  display: block;
+  text-align: left;
+}
+
+button {
+  width: 300px;
+  height: 50px;
+  border: none;
+  background-color: #0a2ff1;
+}
+
+a {
+  font-weight: 400;
+  font-size: 24px;
+  color: #000;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+button a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 26.66px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+footer {
+  background-color: #15163d;
+  width: 100%;
+  height: 25px;
+}
