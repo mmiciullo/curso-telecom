@@ -72,3 +72,12 @@ div img {
   color: #0a2ff1;
   
 }
+
+a {
+  text-decoration: none;
+  transition: ease 2s;
+}
+
+a:hover {
+  transform: scale(1.05);
+}

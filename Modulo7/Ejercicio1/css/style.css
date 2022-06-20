@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@font-face {
+  font-family: "Coolvetica";
+  src: url(../fonts/coolvetica\ rg.otf);
+}
 body {
   font-family: Roboto, sans-serif;
 }
@@ -14,7 +19,7 @@ article {
   padding: 1em;
 }
 h1 {
-  text-align: center;
+  margin-left: 20px;
   font-family: Coolvetica;
   font-weight: 400;
   font-size: 120px;
@@ -29,4 +34,10 @@ p {
   font-size: 24px;
   font-weight: 400;
   color: rgb(4, 20, 108);
+}
+img {
+  width: 25%;
+}
+#apple {
+  width: 18%;
 }
