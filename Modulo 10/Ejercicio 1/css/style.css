@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans:wght@400;700&family=PT+Serif+Caption&display=swap");
+
+:root{
+  --pt-mono: font-family: "PT Mono", monospace;
+  --pt-sans: font-family: "PT Sans", sans-serif;
+  --pt-serif: font-family: "PT Serif Caption", serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav{ 
+  display: flex;
+}
+
+section{
+    margin: 30px;
+}
+
+a {
+  text-decoration: none;
+  
+}
+/* agregar / en los primeros dos elementos de la lista nav */
+a::after {
+  content: "/";
+}
+
+a { 
+    font-family: var(--pt-mono);
+    font-weight: 400;
+    font-size: 32px;
+    color: #04146c;
+}
+
+/* Quitar barra / del último elemento de la lista del nav */
+.activo::after{
+    content: "";
+}
+.activo {
+    font-weight: 700;
+    color: #0a2ff1;
+    font-size: 32px;
+    margin-left:auto;
+}
+
+h1 {
+    margin: 0 0 40px 0;
+    font-family: var(--pt-serif);
+    font-size: 80px;
+    color: #0a2ff1;
+}
+p{
+    margin: 0;
+    font-family: var(--pt-sans);
+    font-weight: 400;
+    font-size: 35px;
+    color: #04146c;
+}
+
+h2, li{
+    font-family: var(--pt-sans);
+    font-weight: 700;
+    font-size: 40px;
+    color: #04146c;
+}
+
+li{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+/* agregar iconos en la lista de recursos e información */
+
+ul:first-of-type li:nth-child(1) {
+    list-style-image: url(../img/vector.svg);
+  }
+  
+  ul:first-of-type li:nth-child(2) {
+    list-style-image: url(../img/foto.svg);
+  }
+  
+  ul:last-of-type li:nth-child(1){
+    list-style-image: url(../img/licencia.svg);
+  }
+  
+  ul:last-of-type li:nth-child(2){
+      list-style-image: url(../img/precio.svg);
+  }
+  
