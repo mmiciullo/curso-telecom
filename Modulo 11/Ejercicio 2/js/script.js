@@ -1,4 +1,4 @@
-let presupuestoPErsonal = Number(prompt("Ingrese el presupuesto personal"));
+let presupuestoPErsonal = prompt("Ingrese el presupuesto personal");
 
 // Calculos de gastos sobre el presupuesto personal
 // 50% para gastos necesarios
