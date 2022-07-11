@@ -26,7 +26,7 @@ let newCredits = []
 for(const key in credits){
     let interes =  (credits[key].capital * credits[key].plazo * credits[key].tasa) / 100
     // Insertar datos al nuevo array
-    neCcredits.push({
+    newCredits.push({
         nombre: credits[key]['nombre'],
         capital: credits[key]['capital'],
         plazo: credits[key]['plazo'],
