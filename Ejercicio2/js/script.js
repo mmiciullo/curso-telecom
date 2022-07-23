@@ -5,36 +5,6 @@ const items = $("#items");
 const result = $("#results");
 
 const btnAgregar = $("#btnAgregar");
-// const btnCalcular = $("#btnCalcular");
-
-// let ingresos = [];
-
-// btnAgregar.click(function () {
-//   ingresos.push({
-//     gastosNecesarios: gNecesarios.val() * porcNecesario.val(),
-//     gastosOpcionales: gOpcionales.val() * porcOpcionales.val(),
-//     ahorroInversion: aInversion.val() * porcInversion.val(),
-//   });
-//   items.html(itemsTemplate({ items: ingresos }));
-// });
-
-// const itemsTemplate = Handlebars.compile(`
-//     <table>
-//         <tr>
-//             <th>Gastos necesarios</th>
-//             <th>Gastos opcionales</th>
-//             <th>Ahorro de inversion</th>
-//         </tr>
-
-//       {{#each items}}
-//         <tr>
-//             <td>{{this.gastosNecesarios}}</td>
-//             <td>{{this.gastosOpcionales}}</td>
-//             <td>{{this.ahorroInversion}}</td>
-//             </tr>
-//       {{/each}}
-//     </table>
-// `);
 
 let ingresos = [];
 let campos = [];
