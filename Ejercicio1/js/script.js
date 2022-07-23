@@ -23,9 +23,9 @@ const cantProducts = () => {
 const delProduct = (name) => {
   const removeProduct = products
     .map((product) => {
-      return product.nombre;
+      return product.name;
     })
-    .indexOf(nombre);
+    .indexOf(name);
   products.splice(removeProduct, 1);
   return products;
 };
@@ -45,6 +45,6 @@ const reportDetails = () => {
   return details;
 };
 
-product(1, "arroz", 20, 30);
+product(1, "Arroz", 20, 30);
 product(2, "Yerba", 20, 30);
 product(3, "Fideos", 20, 30);
