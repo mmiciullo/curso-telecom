@@ -16,7 +16,6 @@ form.addEventListener("submit", (e) => {
 
   if (!regex.test(password.value)) {
     error.push("Contraseña incorrecta");
-    console.log(password.value.length);
   }
 
   if (error.length > 0) {
