@@ -8,16 +8,16 @@ const $tHead = document.createElement("thead");
 const $trHead = document.createElement("tr");
 $fragment = document.createDocumentFragment();
 
-(() => {
-  const url = "https://jsonplaceholder.typicode.com/users";
-  fetch(url)
-    .then((response) => {
-      return response.ok ? response.json() : Promise.reject(response);
-    })
-    .then((json) => {
-      keys(json);
-      dateRows(json);
-    });
+(async () => {
+  try {
+    const url = "https://jsonplaceholder.typicode.com/users";
+    const response = await fetch(url);
+    const json = await response.json();
+    keys(json);
+    dateRows(json);
+  } catch (e) {
+    console.log(e);
+  }
 })();
 
 // Obtener las keys del objecto e insertarlo en el dom
