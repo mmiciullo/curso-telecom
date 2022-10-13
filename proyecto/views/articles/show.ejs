@@ -1,0 +1,10 @@
+<%- include('../layout/_index.ejs') %>
+<div class="container">
+  <h1><%= article.title %></h1>
+  <h4><%= article.markdown %></h4>
+  <div><%= article.createdAt.toLocaleDateString() %></div>
+  <div><%- article.description %></div>
+  <a href="/" class="btn btn-primary">
+    <i class="bi bi-arrow-left-circle-fill"></i>
+  </a>
+</div>
