@@ -1,0 +1,10 @@
+<%- include('../layout/_index.ejs') %> 
+<body>
+    <div class="container form-group mt-3">
+        <h1>Editar Articulo</h1>
+        <form action="/articles/<%= article.id%>?_method=PUT" method="POST" >
+            <%-include('_form')%> 
+        </form>
+    </div>
+</body>
+</html>
