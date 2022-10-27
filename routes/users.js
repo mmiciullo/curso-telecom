@@ -2,34 +2,63 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/user");
 
-router.get("/register", (req, res) => {
-  res.render("users/register", { user: new User() });
+// Register
+router.get("/register", async (req, res) => {
+  res.render("users/register", {
+    newUser: new User(),
+    messages: req.flash("messages"),
+  });
 });
 
 router.post(
-  "/register",
+  "/",
   async (req, res, next) => {
-    req.user = new User();
+    req.newUser = new User();
     next();
   },
-  register("register")
+  singUp()
 );
 
-// Save new usuer
-
-function register(path) {
+function singUp() {
   return async (req, res) => {
-    let user = req.user;
-    user.user = req.body.user;
-    user.password = req.body.password;
-    user.email = req.body.email
+    let user = req.newUser;
+    user.username = req.body.username;
+    user.pw = req.body.pw;
+    user.email = req.body.email;
     try {
       user = await user.save();
       res.redirect("/");
     } catch (e) {
-      console.log(e);
+      let messages = [];
+      let userDb = await User.findOne({ username: user.username }).then(
+        (username) => {
+          if (username) return true;
+        }
+      );
+      let emailDb = await User.findOne({ email: user.email }).then((email) => {
+        if (email) return true;
+      });
+      if (e) {
+        if (userDb) {
+          messages.push("Username already exist!");
+        }
+        if (emailDb) {
+          messages.push("Email already exist!");
+        }
+        return req.flash("messages", messages), res.redirect("/users/register");
+      }
     }
   };
 }
+
+// Login
+
+router.get("/login", (req, res) => {
+  res.send("login");
+});
+
+router.post("/", (req, res) => {
+  
+});
 
 module.exports = router;
