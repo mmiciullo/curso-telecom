@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const passport = require("passport");
+
 const User = require("../models/user");
+const { forwardAuthenticated } = require("../config/auth");
 
 // Register
 router.get("/register", async (req, res) => {
@@ -52,13 +55,52 @@ function singUp() {
 }
 
 // Login
+router.get("/login", (req, res) => res.render("users/login"));
 
-router.get("/login", (req, res) => {
-  res.send("login");
-});
+// router.post("/login", (req, res) => {
+//   passport.authenticate("local", {
+//     successRedirect: "/",
+//     failureRedirect: "/users/login",
+//   })(req, res);
+// });
 
-router.post("/", (req, res) => {
-  
-});
+router.post(
+  "/login",
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/users/login",
+    failureFlash: true,
+  })
+);
+
+// router.post("/", (req, res) => {}, singIn());
+
+// function singIn() {
+//   return async (req, res) => {
+//     await User.findOne({ username: req.body.username }, (err, userDB) => {
+//       if (err) {
+//         return res.status(500).json({
+//           err: err,
+//         });
+//       }
+//       // Verifica que exista un usuario con el USERNAME en bd
+//       if (!userDB) {
+//         return (
+//           req.flash("messages", "Username or password incorrect."),
+//           res.status(400),
+//           res.redirect("/users/login")
+//         );
+//       }
+//       //  Comprar la contraseña ingresada por el usuario con el hash de bd
+//       if (!bcrypt.compare(req.body.pw, userDB.pw)) {
+//         return (
+//           req.flash("User or password incorrect."),
+//           res.status(500),
+//           res.redirect("/users/login")
+//         );
+//       }
+//     });
+//   };
+// }
 
 module.exports = router;
