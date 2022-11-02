@@ -22,18 +22,19 @@ const userSchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("pw")) next();
-  this.pw = await bcrypt.hash(this.pw, 10);
-  return next();
-});
+// userSchema.pre("save", async function (next) {
+//   if (!this.isModified("pw")) next();
+//   this.pw = await bcrypt.hash(this.pw, 10);
+//   return next();
+// });
 
-userSchema.methods.comparePassword = function (passw, cb) {
-  bcrypt.compare(passw, this.password, function (err, isMatch) {
-    if (err) {
-      return cb(err, false);
-    }
-    return cb(null, isMatch);
-  });
+userSchema.methods.encrypPassword = async (pw) => {
+  const salt = await bcrypt.genSalt(10);
+  return await bcrypt.hash(pw, salt);
 };
+
+userSchema.methods.matchPassword = async function (pw) {
+  return await bcrypt.compare(pw, this.pw);
+};
+
 module.exports = mongoose.model("User", userSchema);
