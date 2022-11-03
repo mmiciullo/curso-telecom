@@ -3,7 +3,6 @@ const router = express.Router();
 const passport = require("passport");
 
 const User = require("../models/user");
-const { forwardAuthenticated } = require("../config/auth");
 
 // Register
 router.get("/register", async (req, res) => {
