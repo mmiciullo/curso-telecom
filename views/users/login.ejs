@@ -1,7 +1,7 @@
+<%- include('../layout/_index.ejs') %>
 <div class="row mt-5">
   <div class="col-md-6 m-auto">
     <div class="card card-body">
-      <%- include('../layout/_index.ejs') %> 
       <% if(error.length > 0){ %>
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <%= error %>
@@ -38,11 +38,9 @@
             placeholder="Password"
           />
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Login</button>
+        <button type="submit" class="btn btn-outline-primary btn-block">Login</button>
+        <a href="/users/login" class="btn btn-outline-danger btn-block">Register</a>
       </form>
-      <p class="lead mt-4">
-        No Account? <a href="/users/register">Register</a>
-      </p>
     </div>
   </div>
 </div>
