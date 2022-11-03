@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const methodOverride = require("method-override");
-const session = require('express-session')
+const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
@@ -23,15 +23,26 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 // Session middleware
 app.use(cookieParser("secretSession"));
+app.set("trust proxy", 1);
 app.use(
   session({
-    // secret: propiedad para que cada sessión sea guardada de manera única
+    cookie: {
+      secure: true,
+      maxAge: 60000,
+    },
     secret: "secretSession",
-    cookie: { maxAge: 60000 },
+    secret: "secret",
+    saveUninitialized: true,
     resave: false,
-    saveUninitialized: false,
   })
 );
+
+app.use(function (req, res, next) {
+  if (!req.session) {
+    return next(new Error("Oh no")); //handle error
+  }
+  next(); //otherwise continue
+});
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
