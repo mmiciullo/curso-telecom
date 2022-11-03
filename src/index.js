@@ -31,7 +31,6 @@ app.use(
       maxAge: 60000,
     },
     secret: "secretSession",
-    secret: "secret",
     saveUninitialized: true,
     resave: false,
   })
